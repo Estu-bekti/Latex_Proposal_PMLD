@@ -1,0 +1,39 @@
+%Template Laporan MBKM
+%Departemen Teknik Elektro dan Informatika
+%Sekolah Vokasi UGM
+
+%Dikembangkan oleh Dr. Fahmizal, S.T., M.Sc. dan Tim
+
+%Perangkat lunak yang digunakan untuk mengolah LaTEX pada template ini adalah
+%- TeXstudio
+%- MiKTex
+%- Overleaf (LaTEX editor berbasis daring)
+\documentclass[12pt, a4paper, left=3cm, right=3cm, top=2.5cm, bottom=3cm, onecolumn, oneside, final]{report}
+
+\input{chapters/identitas}
+\input{chapters/preambles}
+
+\begin{document}
+\NoBgThispage
+\include{chapters/sampul}
+
+\backgroundsetup{
+  scale=1,
+  angle=0,
+  opacity=1,
+  position=current page.center,
+  vshift=0mm,
+  hshift=0mm,
+  contents={\includegraphics[width=\paperwidth,height=\paperheight]{gambar/bg_KMTEDI.png}}
+}
+
+\pagenumbering{arabic}
+% Aktifkan background mulai Bab 1 hingga Lampiran
+\BgThispage
+\include{chapters/isi}
+\include{chapters/Lembar Pengesahan}
+\include{chapters/Lampiran}
+\include{chapters/Lampiran2}
+\end{document}
+
+
